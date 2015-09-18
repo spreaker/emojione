@@ -1,4 +1,4 @@
-#![Emoji One Logo](http://git.emojione.com/assets/png/1F40C.png) Emoji One
+#![Emoji One Logo](http://git.emojione.com/assets/png/1F40C.png) Emoji One [![Build Status](https://travis-ci.org/Ranks/emojione.svg?branch=master)](https://travis-ci.org/Ranks/emojione)
 > bringing you [emojione.com](http://emojione.com/) & [emoji.codes](http://emoji.codes/)
 
 The web's first and only complete open source emoji set. It is 100% free and super easy to integrate.
@@ -21,12 +21,14 @@ When storing user inputted text in your database, say from a guestbook or throug
 
 ## Installation
 
-We've teamed up with [JSDelivr](http://jsdelivr.com) to provide a simple way to install these emoji on any javascript-enabled website. Add the following script and stylesheet links to the head of your webpage:
+We've teamed up with [JSDelivr](http://www.jsdelivr.com/#!emojione) to provide a simple way to install these emoji on any javascript-enabled website. Add the following script and stylesheet links to the head of your webpage:
 
 ```
-<script src="//cdn.jsdelivr.net/emojione/1.3.0/lib/js/emojione.min.js"></script>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/emojione/1.3.0/assets/css/emojione.min.css"/>
+<script src="//cdn.jsdelivr.net/emojione/1.5.0/lib/js/emojione.min.js"></script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/emojione/1.5.0/assets/css/emojione.min.css"/>
 ```
+
+Alternatively, CDNjs is also available as a [CDN Host for Emoji One](https://cdnjs.com/libraries/emojione).
 
 Quick installs can also be done using NPM and Bower (for the Javascript toolkit) or Composer (for the PHP toolkit).
 
@@ -43,7 +45,12 @@ Quick installs can also be done using NPM and Bower (for the Javascript toolkit)
 
 #### Composer
 ```
- "require": { "emojione/emojione": "dev-master" }
+$ composer require emojione/emojione
+```
+
+#### Meteor
+```
+meteor add qnub:emojione
 ```
 
 
@@ -75,21 +82,56 @@ This demo shows you how to take input containing both native unicode emoji and s
 
 ###PHP Conversion
 
-**[::toShort\($str\)](http://git.emojione.com/demos/phptoshort.php)** - _native unicode -> shortnames_
+#####As of version 1.4.1 this library syntax has changed.
+
+**[toShort\($str\)](http://git.emojione.com/demos/1.4.1/phptoshort.php)** - _native unicode -> shortnames_
 
 This demo shows you how to take native unicode emoji input, such as that from your mobile device, and translate it to their corresponding shortnames. (we recommend this for database storage)
 
-**[::shortnameToImage\($str\)](http://git.emojione.com/demos/phpshortnametoimage.php)** - _shortname -> images_
+**[shortnameToImage\($str\)](http://git.emojione.com/demos/1.4.1/phpshortnametoimage.php)** - _shortname -> images_
 
 This demo shows you how to take input containing only shortnames and translate it directly to Emoji One images. (when displaying the unified input to clients)
 
-**[::unicodeToImage\($str\)](http://git.emojione.com/demos/phpunicodetoimage.php)** - _native unicode -> images_
+**[unicodeToImage\($str\)](http://git.emojione.com/demos/1.4.1/phpunicodetoimage.php)** - _native unicode -> images_
 
 This demo shows you how to take native unicode emoji input, such as that from your mobile device, and translate it directly to Emoji One images. (would be great for a live editor preview)
 
-**[::toImage\($str\)](http://git.emojione.com/demos/phptoimage.php)** - _native unicode + shortnames -> images (mixed input)_
+**[toImage\($str\)](http://git.emojione.com/demos/1.4.1/phptoimage.php)** - _native unicode + shortnames -> images (mixed input)_
 
 This demo shows you how to take input containing both native unicode emoji and shortnames, and translate it into Emoji One images for display.
+
+
+#####Note: As of version 1.4.1 the following implementation has been deprecated. It's included in the library for backwards compatibility but will be removed at a later date.
+
+**[::toShort\($str\)](http://git.emojione.com/demos/1.4.0/phptoshort.php)** - _native unicode -> shortnames_
+
+This demo shows you how to take native unicode emoji input, such as that from your mobile device, and translate it to their corresponding shortnames. (we recommend this for database storage)
+
+**[::shortnameToImage\($str\)](http://git.emojione.com/demos/1.4.0/phpshortnametoimage.php)** - _shortname -> images_
+
+This demo shows you how to take input containing only shortnames and translate it directly to Emoji One images. (when displaying the unified input to clients)
+
+**[::unicodeToImage\($str\)](http://git.emojione.com/demos/1.4.0/phpunicodetoimage.php)** - _native unicode -> images_
+
+This demo shows you how to take native unicode emoji input, such as that from your mobile device, and translate it directly to Emoji One images. (would be great for a live editor preview)
+
+**[::toImage\($str\)](http://git.emojione.com/demos/1.4.0/phptoimage.php)** - _native unicode + shortnames -> images (mixed input)_
+
+This demo shows you how to take input containing both native unicode emoji and shortnames, and translate it into Emoji One images for display.
+
+###Meteor Conversion
+
+#### Template helpers
+
+```
+My emoji {{> emojione ':beers:'}} text.
+```
+
+Or
+
+```
+{{#emojione}}My emoji :beers: text.{{/emojione}}
+```
 
 ###Extras
 
