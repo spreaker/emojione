@@ -21,7 +21,7 @@ $client->imagePathSVG = './../assets/svg/';
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>::toShort($str) - PHP - Emoji One Labs</title>
+    <title>toShort($str) - PHP - Emoji One Labs</title>
 
     <!-- Emoji One CSS: -->
     <link rel="stylesheet" href="./../assets/css/emojione.min.css" type="text/css" media="all" />
@@ -50,7 +50,7 @@ $client->imagePathSVG = './../assets/svg/';
 <!-- Masthead -->
 <header class="masthead">
     <div class="container">
-        <h1 class="masthead-title">Emoji One Labs</h1><span class="version">version <span>1.5.0</span></span>
+        <h1 class="masthead-title">EmojiOne Labs</h1><span class="version">version <span>2.2.5</span></span>
     </div>
 </header>
 
@@ -132,8 +132,8 @@ $client->imagePathSVG = './../assets/svg/';
 
 <footer class="demo-footer">
     <div class="container">
-        <small>&copy; Copyright 2014-2015 Ranks.com.</small>
-        <small>Emoji One artwork is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/legalcode">CC-BY-SA-4.0</a> License</small>
+        <small>&copy; Copyright 2014-2016 Ranks.com.</small>
+        <small>Emoji One artwork is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/legalcode">CC-BY-4.0</a> License</small>
         <small>Emoji One demos, documentation, scripts, stylesheets and all other non-artwork is licensed under the <a
                 href="http://opensource.org/licenses/MIT">MIT</a> License</small>
     </div>
