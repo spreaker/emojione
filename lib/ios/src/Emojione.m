@@ -1002,7 +1002,7 @@
         @"arrow_heading_up" : @"\U00002934",
         @"arrow_heading_down" : @"\U00002935",
         @"hash" : @"#\U000020e3",
-        @"asterisk" : @"\U0000002a\U000020e3",
+        @"asterisk" : @"*\U000020e3",
         @"information_source" : @"\U00002139",
         @"abc" : @"\U0001f524",
         @"abcd" : @"\U0001f521",
